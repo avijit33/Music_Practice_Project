@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>{{ text }}</h1>
+
+    <table style="padding: 15px; border: 5px solid black;">
+        <tr>
+            <td>Name</td>
+            <td>Artist</td>
+        </tr>
+
+        {% for x in album %}
+
+        <tr>
+            <td>{{ x.name }}</td>
+            <td> {{ x.artist }} </td>
+        </tr>
+       
+        {% endfor %}
+    </table>
+
+</body>
+</html>
